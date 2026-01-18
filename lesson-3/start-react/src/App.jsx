@@ -1,20 +1,16 @@
-import Card from './component/Card'
 import Column from './component/Column'
 import SearchArea from './component/SearchArea'
-const data = [{ name: "Đặng Văn Nghĩa", className: "10A5", description: "Học nữa, học mãi" },
-{ name: "Đặng Văn Ngọc", className: "10A3", description: "Đi một ngày đàng học một sàng khôn" },
-{ name: "Lê Hồng Anh", className: "10A6", description: "Học nữa, học mãi" }
-]
+import { tasks, taskStatus } from './data'
+import './App.css'
 function App() {
   return (
     <>
-    <SearchArea/>
-    <Column/>
-      {
-        data.map(item =>
-          <Card name={item.name} className={item.className} description={item.description} />
-        )
-      }
+      <SearchArea />
+      <div className="board-content">
+        {
+          taskStatus.map(task => <Column key={task.statusId} tasks={tasks.filter(item => item.statusId === task.statusId)} columnName={task.name} tasksCount={tasks.filter(item => item.statusId === task.statusId).length} />)
+        }
+      </div>
 
     </>
   )
