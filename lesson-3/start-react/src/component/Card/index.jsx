@@ -1,5 +1,6 @@
 import "./index.css"
 import "../../../src/index.css"
+import { Button } from 'antd'
 const Card = (props) => {
     const {
         title,
@@ -16,7 +17,7 @@ const Card = (props) => {
                 <div className="description">
                     <p>{description}</p>
                 </div>
-                <p>{assignedTo}</p>
+                <Button className="w-fit" type="primary">{assignedTo}</Button>
             </div>
             <div className="bottom-info">
                 {/* <p>{deadline}</p> */}

@@ -2,9 +2,11 @@ import Column from './component/Column'
 import SearchArea from './component/SearchArea'
 import { tasks, taskStatus } from './data'
 import './App.css'
+
 function App() {
   return (
     <>
+      
       <SearchArea />
       <div className="board-content">
         {
