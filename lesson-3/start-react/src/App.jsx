@@ -3,6 +3,7 @@ import SearchArea from './component/SearchArea'
 import { tasks } from './data'
 import './App.css'
 import { useState, useEffect } from 'react';
+import LoginPage from './component/Login';
 
 function App() {
 
@@ -48,14 +49,15 @@ function App() {
 
   return (
     <div className="app-container">
-      <SearchArea />
+      {/* <SearchArea />
       <div className="board-content">
         {
         tasksStatusList.map(column => <Column 
           columnName={column.name} 
           tasks={taskList.filter(item => item.statusId == column.statusId)}/>)
         }
-      </div>
+      </div> */}
+      <LoginPage/>
     </div>
   )
 }
