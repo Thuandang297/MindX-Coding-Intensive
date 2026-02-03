@@ -1,8 +1,9 @@
 import { LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Typography } from "antd";
+import { Link } from "react-router";
 // import Lang from '../../components/Lang';
 
-const { Text, Title, Link } = Typography;
+const { Text, Title } = Typography;
 
 export default function LoginPage() {
     const onFinish = (values) => {
@@ -72,16 +73,18 @@ export default function LoginPage() {
                             </a>
                         </Form.Item>
                         <Form.Item>
-                            <Button block type="primary" htmlType="submit" className="w-full">
-                                Log in
-                            </Button>
+                            <Link to='/board' >
+                                <Button block type="primary" htmlType="submit" className="w-full">
+                                    Log in
+                                </Button>
+                            </Link>
+
                             <div className="mt-4 text-center">
                                 <Text className="text-gray-500">Don't have an account?</Text>{" "}
                                 <Link href="#" className="text-blue-500">Sign up now</Link>
                             </div>
                         </Form.Item>
                     </Form>
-                    {/* <Lang /> */}
                 </div>
             </section>
         </div>
