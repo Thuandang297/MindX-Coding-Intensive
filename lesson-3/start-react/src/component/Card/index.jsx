@@ -3,6 +3,7 @@ import "../../../src/index.css"
 import { Button } from 'antd'
 import { LinkOutlined, EditOutlined, ClockCircleOutlined, FlagOutlined } from '@ant-design/icons'
 import { users, flags } from '../../data'
+import { memo } from "react"
 
 const Card = (props) => {
     const {
@@ -55,4 +56,4 @@ const Card = (props) => {
     )
 }
 
-export default Card;
+export default memo(Card);

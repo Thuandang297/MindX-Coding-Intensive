@@ -4,11 +4,13 @@ import Column from '../component/Column';
 import SearchArea from '../component/SearchArea';
 import TaskModal from '../component/TaskModal';
 import './index.css';
+import { useMemo } from 'react';
 function Board() {
 
 
     const [searchParams, _] = useSearchParams();
     const [modalOpen, setModalOpen] = useState(false);
+    const searchVal = searchParams.get('searchVal')
 
     const navigate = useNavigate();
 
@@ -16,7 +18,7 @@ function Board() {
         if (searchParams.get('open') === 'create') {
             setModalOpen(true)
         }
-    }, [searchParams,setModalOpen])
+    }, [searchParams, setModalOpen])
     //Lưu dữ liệu danh sách tasks
     const [taskList, setTaskList] = useState([]);
 
@@ -30,7 +32,6 @@ function Board() {
         const urlGetTasks = 'https://mindx-mockup-server.vercel.app/api/resources/tasks?apiKey=6974d253912a2afb2f310cde'
         const response = await fetch(urlGetTasks);
         const responseData = await response.json();
-        console.log("🚀 ~ getTasksData ~ responseData:", responseData)
         setTaskList(responseData.data.data);
     }
 
@@ -57,14 +58,22 @@ function Board() {
     const handleSaveTask = () => {
         setModalOpen(false);
     };
+
+    const filteredTasks = useMemo(() => {
+        const allTasks = [...taskList];
+        if(!searchVal) return allTasks;
+        const searchResponse = allTasks.filter(item => item.title.includes(searchVal));
+        return searchResponse;
+    }, [searchVal,taskList])
+
     return (
         <div className="app-container">
-            <SearchArea />
+            <SearchArea  />
             <div className="board-content">
                 {
                     tasksStatusList.map(column => <Column
                         columnName={column.name}
-                        tasks={taskList.filter(item => item.statusId == column.statusId)} />)
+                        tasks={filteredTasks.filter(item => item.statusId == column.statusId)} />)
                 }
             </div>
             <TaskModal

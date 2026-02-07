@@ -2,6 +2,7 @@ import Card from "../Card";
 import "./index.css"
 import { Button } from "antd";
 import { PlusOutlined, EllipsisOutlined } from "@ant-design/icons";
+import { memo } from "react";
 
 const Column = (props) => {
     const { columnName, tasks } = props;
@@ -45,4 +46,4 @@ const Column = (props) => {
     )
 }
 
-export default Column;
+export default memo(Column);
