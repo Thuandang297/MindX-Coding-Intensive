@@ -20,3 +20,20 @@ Lesson-09: Routing
  + Điều hướng giữa các component (thành phần) bằng cách sử dụng Routing
 
  
+ Lesson-10: Hooks
+
+ -useState: lưu trữ và cập nhật dữ liệu, trạng thái trong component.
+
+ -useEffect: Xử lý logic dựa trên cập nhật của các state, props.(dependences)
+
+ -useContext: Quản lý dữ liệu chung giữa các component.
+
+ -useNavigate: Định tuyến URL cho người dùng.
+
+ -useRef
+
+ -memo:
+
+ -useMemo
+
+ -useCallBack
