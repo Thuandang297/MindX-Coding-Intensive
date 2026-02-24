@@ -1,0 +1,31 @@
+.search-area {
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.search-input {
+    flex: 1;
+    max-width: 350px;
+}
+
+.search-input .ant-input {
+    border-color: #d9d9d9;
+}
+
+.search-icon {
+    color: #999999;
+}
+
+.new-item-btn {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    font-weight: 600;
+    padding: 0 24px;
+}

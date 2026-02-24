@@ -1,0 +1,134 @@
+.task-modal {
+    /* Modal styling */
+}
+
+.task-modal .ant-modal-content {
+    padding: 24px;
+}
+
+.modal-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.modal-title-icon {
+    font-size: 20px;
+    color: #66bb6a;
+}
+
+.task-form {
+    margin-top: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-row .form-item {
+    flex: 1;
+}
+
+.form-item {
+    margin-bottom: 16px;
+}
+
+.form-item label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    border-color: #d9d9d9;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #999999;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.form-select .ant-select-selector {
+    border-color: #d9d9d9;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+.form-select .ant-select-selector:focus {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.assign-item {
+    max-width: 220px;
+}
+
+.form-actions {
+    margin-bottom: 0;
+    margin-top: 24px;
+}
+
+.button-group {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.cancel-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    border-color: #d9d9d9;
+    color: #333333;
+    border-radius: 6px;
+}
+
+.cancel-btn:hover {
+    border-color: #999999;
+    color: #555555;
+}
+
+.save-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+    border-radius: 6px;
+}
+
+.save-btn:hover {
+    background-color: #6d28d9;
+    border-color: #6d28d9;
+}
+
+/* Error message styling */
+.ant-form-item-has-error .form-input,
+.ant-form-item-has-error .form-textarea,
+.ant-form-item-has-error .form-select .ant-select-selector {
+    border-color: #ff4d4f;
+}
+
+.ant-form-item-explain-error {
+    color: #ff4d4f;
+    font-size: 12px;
+    margin-top: 4px;
+}
